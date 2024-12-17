@@ -16,7 +16,7 @@ curl -L https://foundry.paradigm.xyz | bash
 
 1. [counter with foundry](./counter/README.md)
 2. [counter with hardhat](./hardhat-counter/README.md)
-3. [erc-20 with foundry](./erc-20/README.md)
+3. [simple-token with foundry](./simple-token/README.md)
 4. [voting](.)
 5. [simple-app-with-scaffold](README.md#scaffold-eth2)
 
