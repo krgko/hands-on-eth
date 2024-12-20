@@ -64,8 +64,49 @@ An open-source, up-to-date toolkit for building decentralized applications (dapp
   Thanks for using Scaffold-ETH 2 🙏, Happy Building!
 ```
 
-## Usefuls
+## Smart Contract Analyzer
+
+These tools will assist you in identifying weaknesses and inconsistencies in practice.
+
+### Slither
+
+See more: <https://github.com/crytic/slither>
+
+```bash
+slither [path_to_your_contracts or .] --detect reentrancy-eth,reentrancy-no-eth,reentrancy-unlimited-gas
+```
+
+### Mythril
+
+See more: <https://github.com/Consensys/mythril>
+
+```bash
+docker run --platform linux/x86_64 -it -v "$(pwd):/code" mythril/myth:0.24.8 sh -c "cd /code && myth -v 4 analyze contracts/*.sol --solc-json remappings.json"
+```
+
+For `remappings.json`, create inside your project's root.
+
+```json
+{
+  "remappings": [
+    "@openzeppelin/contracts-upgradeable=./node_modules/@openzeppelin/contracts-upgradeable",
+    "@openzeppelin/contracts=./node_modules/@openzeppelin/contracts",
+    "@chainlink=./node_modules/@chainlink"
+  ],
+  "optimizer": { "enabled": true }
+}
+```
+
+## Usefuls Resources
 
 - <https://solidity-by-example.org/hello-world/>
 - <https://wizard.openzeppelin.com/>
 - <https://remix.ethereum.org/>
+- <https://swcregistry.io/> - no longer maintained
+- <https://entethalliance.org/specs/ethtrust-sl/>
+- <https://github.com/bekatom/awesome-ethereum>
+- <https://github.com/ethereum/awesome-remix>
+- <https://github.com/crytic/awesome-ethereum-security>
+- <https://github.com/attestate/awesome-ethereum-rollups>
+- <https://github.com/manifoldfinance/awesome-ethereum-finance>
+- <https://github.com/ttumiel/Awesome-Ethereum>
